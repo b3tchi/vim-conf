@@ -36,5 +36,13 @@ function config
 		nvim $HOME/.config/nvim/init.vim
 end
 
+#termux function check
+function isTermux
+		if command -v termux-setup-storage  
+				then  
+				echo "running in termux like a boss"  
+		end
+end
+
 #script selector
 eval $argv
