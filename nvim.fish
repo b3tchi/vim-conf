@@ -33,7 +33,13 @@ end
 
 #config edit
 function config
-		nvim $HOME/.config/nvim/init.vim
+		nvim init.vim
+end
+
+#config config to final location
+function config-deploy
+		rm $HOME/.config/nvim/init.vim
+		cp init.vim $HOME/.config/nvim/init.vim
 end
 
 #termux function check

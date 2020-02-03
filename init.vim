@@ -42,6 +42,7 @@ let g:SimpylFold_docstring_preview = 1
 
 "fix tabs spaces to 4
 set tabstop=4
+set shiftwidth=4
 
 "terminal escape remap
 tnoremap <Esc> <C-\><C-n>
