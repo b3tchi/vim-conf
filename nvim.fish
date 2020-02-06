@@ -1,3 +1,5 @@
+#! /usr/bin/fish
+
 #installer neovim
 function install
 	if isTermux then
@@ -46,16 +48,25 @@ function config-deploy
 	cp init.vim $HOME/.config/nvim/init.vim
 end
 
+
 #termux function check
-function isTermux
-	if command -v termux-setup-storage  
-		return 1
-		echo "running in termux like a boss"  
-	else 
-		echo "not termux"
-		return 0	
+set onTermux 0
+
+function checkTermux
+	if [ (count (string match -e "com.termux" $PATH)) != 0 ]
+		set onTermux 1
 	end
 end
 
+checkTermux
+
+#testing termux
+function testTermux
+	if [ $onTermux = 1 ] 
+		echo "inTermux"
+	else
+		echo "notOnTermux"
+	end
+end
 #script selector
 eval $argv
