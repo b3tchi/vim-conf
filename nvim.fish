@@ -58,8 +58,6 @@ function checkTermux
 	end
 end
 
-checkTermux
-
 #testing termux
 function testTermux
 	if [ $onTermux = 1 ] 
@@ -68,5 +66,7 @@ function testTermux
 		echo "notOnTermux"
 	end
 end
+
 #script selector
+checkTermux
 eval $argv
