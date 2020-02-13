@@ -2,11 +2,12 @@
 
 #installer neovim
 function install
-	if isTermux then
-		pkg install neovim
-	else
-		sudo apt-get install neovim
-	end
+	# if isTermux then
+	# 	pkg install neovim
+	# else
+	# 	sudo apt-get install neovim
+	# end
+	pkgInstall neovim
 end
 
 #install iaPlug
@@ -64,6 +65,15 @@ function testTermux
 		echo "inTermux"
 	else
 		echo "notOnTermux"
+	end
+end
+
+#install package
+function pkgInstall
+	if [ $onTermux = 1 ] 
+		pkg install $argv[1]
+	else
+		sudo apt-get install $argv[1]
 	end
 end
 
