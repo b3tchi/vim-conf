@@ -2,25 +2,20 @@
 
 #installer neovim
 function install
-	# if isTermux then
-	# 	pkg install neovim
-	# else
-	# 	sudo apt-get install neovim
-	# end
 	pkgInstall neovim
 end
 
 #install iaPlug
 function iAPlug
-	sudo apt-get install curl
+	pkgInstall curl
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
 #install completer additions
 function iAcoc
 	#sudo apt-get install build-essential cmake python3-dev
-	sudo apt-get install nodejs
-	sudo apt-get install npm
+	pkgInstall nodejs
+	pkgInstall npm
 		
 	#write empty config
 	vimconfigfile=$HOME/.config/nvim/init.vim
@@ -77,6 +72,19 @@ function pkgInstall
 	end
 end
 
-#script selector
+#script selector 
 checkTermux
-eval $argv
+
+#no option menu
+if count $argv > /dev/null
+	eval $argv
+else
+	echo \tinstall - install neovim
+	echo \tiAPlug - install Plug [curl]
+	echo \tiAcoc	- install coc [node,npm]
+ 	echo \trPlug - refresh plugins 
+ 	echo \tconfig - edit config
+ 	echo \tconfig-deploy - deploy config locally
+	echo 
+	testTermux
+end
