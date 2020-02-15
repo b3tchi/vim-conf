@@ -18,7 +18,7 @@ function iAcoc
 	pkgInstall npm
 		
 	#write empty config
-	vimconfigfile=$HOME/.config/nvim/init.vim
+	set vimconfigfile $HOME/.config/nvim/init.vim
 
 	#echo "call plug#begin()" >> $vimconfigfile
 	#echo "Plug 'Valloric/YouCompleteMe'" >> $vimconfigfile
@@ -40,7 +40,9 @@ end
 
 #config config to final location
 function config-deploy
-	rm $HOME/.config/nvim/init.vim
+	if [ -f $HOME/.config/nvim/init.vim ]
+		rm $HOME/.config/nvim/init.vim
+	end
 	cp init.vim $HOME/.config/nvim/init.vim
 end
 
