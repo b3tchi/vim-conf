@@ -6,7 +6,7 @@ Plug 'vim-scripts/indentpython'"indentaion for python
 Plug 'evanleck/vim-svelte'"support for svelte
 Plug 'nvie/vim-flake8'"Python PEP8 syntax highlighting
 Plug 'vim-syntastic/syntastic'"syntax highlighting
-Plug 'kmarius/vim-fish'"syntax highlighting for fish scripts
+Plug 'kmarius/vim-fish'"Python PEP8 syntax highlighting
 
 Plug 'jnurmine/Zenburn'"color scheme Zenburn
 Plug 'rakr/vim-one'"color scheme same as atom
