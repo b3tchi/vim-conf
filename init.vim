@@ -6,7 +6,7 @@ Plug 'vim-scripts/indentpython'"indentaion for python
 Plug 'evanleck/vim-svelte'"support for svelte
 Plug 'nvie/vim-flake8'"Python PEP8 syntax highlighting
 Plug 'vim-syntastic/syntastic'"syntax highlighting
-Plug 'kmarius/vim-fish'"Python PEP8 syntax highlighting
+Plug 'kmarius/vim-fish'"support for fish scritpts
 
 Plug 'jnurmine/Zenburn'"color scheme Zenburn
 Plug 'rakr/vim-one'"color scheme same as atom
@@ -16,8 +16,9 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'"hybrid/static number toggle when multip
 Plug 'scrooloose/nerdtree'"tree view
 Plug 'tmhedberg/SimpylFold'"folding of texw
 Plug 'tpope/vim-fugitive'"git integration
-Plug 'cohama/lexima.vim'"autoclosing pairs
+Plug 'tpope/vim-surround'"text surrounding with symbols,  tags
 Plug 'tpope/vim-commentary'"comments in vim
+Plug 'cohama/lexima.vim'"autoclosing pairs
 Plug 'vim-airline/vim-airline'"improved status bar
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "VSCode completer requires NodeJs
 Plug 'terryma/vim-smooth-scroll'"smooth scrolling 
