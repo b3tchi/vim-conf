@@ -11,6 +11,17 @@ function iAPlug
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
+function iPySupport
+	pkgInstall python3 
+	pkgInstall python3-pip
+
+	pip install flake8 #linter
+	pip install pynvim #?not sure but neded in many cases
+	pip install black #format fixer
+	pip install jedi #syntax highlighting
+end
+
+
 #install completer additions
 function iAcoc
 	#sudo apt-get install build-essential cmake python3-dev
@@ -30,7 +41,7 @@ end
 
 #install plugin 
 function rPlug
-	nvim +:PlugInstall +:q! +:q!
+	nvim +:PlugClean +:PlugInstall +:q! +:q!
 end
 
 #config edit

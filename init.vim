@@ -2,12 +2,21 @@
 call plug#begin()
 
 Plug 'mattn/emmet-vim'"html tags generator support
-Plug 'vim-scripts/indentpython'"indentaion for python
 Plug 'evanleck/vim-svelte'"support for svelte
-Plug 'nvie/vim-flake8'"Python PEP8 syntax highlighting
-Plug 'vim-syntastic/syntastic'"syntax highlighting
 Plug 'kmarius/vim-fish'"support for fish scritpts
+"To be investigated Denite 
 
+"Plug 'vim-syntastic/syntastic'"syntax highlighting "Disabled could interfere other plugins
+
+"Python
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} "syntax highlighting
+"Plug 'davidhalter/jedi-vim' "autocompletion 
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "another autocompletion
+Plug 'nvie/vim-flake8'"Python PEP8 syntax linter
+Plug 'psf/black' "python formatting fixer
+Plug 'vim-scripts/indentpython'"indentaion for python
+
+"Schemes
 Plug 'jnurmine/Zenburn'"color scheme Zenburn
 Plug 'rakr/vim-one'"color scheme same as atom
 Plug 'altercation/vim-colors-solarized'"color scheme Solarized
@@ -20,13 +29,16 @@ Plug 'tpope/vim-surround'"text surrounding with symbols,  tags
 Plug 'tpope/vim-commentary'"comments in vim
 Plug 'cohama/lexima.vim'"autoclosing pairs
 Plug 'vim-airline/vim-airline'"improved status bar
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "VSCode completer requires NodeJs
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "VSCode completer requires NodeJs "Temporary disabled
 Plug 'terryma/vim-smooth-scroll'"smooth scrolling 
 
 "Plug 'Valloric/YouCompleteMe'"autocompletion for vim
 "Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}"extended status bar
 
 call plug#end()
+
+"Deoplete autocompletion
+"let g:deoplete#enable_at_startup = 1
 
 "remaping space
 noremap <space> :
