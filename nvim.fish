@@ -11,6 +11,10 @@ function iAPlug
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
+function switchCaps
+	setxkbmap -option caps:swapescape
+end
+
 function iPySupport
 	pkgInstall python3 
 	pkgInstall python3-pip
