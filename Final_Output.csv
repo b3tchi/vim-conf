@@ -1,0 +1,27 @@
+## Comments
+# label: %Title%
+# stylename: Type
+# styles: {"Interface": "shape=square;fillColor=#FFCC99;strokeColor=#666666;", \
+#          "Tool": "shape=cylinder;fillColor=#66CCFF;strokeColor=#666666;"}
+# namespace: csvimport-
+# connect: {"from":"SourceID", "to":"ItemID", "invert":true, "style":"curved=1;endArrow=blockThin;startArrow=none;strokeColor=#999999;endFill=1;"}
+# width: auto
+# height: auto
+# ignore: Type,ItemID,SourceID
+# padding: 5
+# nodespacing: 60
+# levelspacing: 60
+# edgespacing: 40
+# layout: auto
+## CSV HEADERS "ItemID","Type","Title","SourceID"
+"ItemID","Type","Title","SourceID"
+8,"Tool","NormDb",
+9,"Tool","3D Internal Brief","13"
+10,"Interface","Upload Final 2","9"
+11,"Tool","Instore Internal Brief","13"
+12,"Interface","Specialits Comments","11"
+13,"Interface","LoadBrief","2"
+1,"Tool","RT",
+2,"Tool","PPM","10,12,3,4"
+3,"Interface","RT Miner","1"
+4,"Interface","RT Miner2","1"
